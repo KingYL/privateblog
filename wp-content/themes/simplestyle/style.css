@@ -1,0 +1,200 @@
+/*  
+
+Theme Name: Tutorial
+
+Theme URI: http://www.wpdesigner.com
+
+Description: This is my theme for a tutorial.
+
+Version: 1.0
+
+Author: Small Potato
+
+Author URI: http://www.wpdesigner.com/
+
+*/
+
+body {
+	background-color: white;
+	font-family: serif;
+	text-align: center;
+	color: black;
+	background-repeat: no-repeat;
+}
+
+ul {
+	list-style: none;
+}
+
+a:visited {
+	color: blue;
+}
+
+#wrapper {
+	margin: auto;
+ 	top: 0; left: 0; bottom: 0; right: 0;
+	width: 800px;
+	text-align: left;
+	background-color: silver;
+}
+
+#header {
+	padding:0 0.1em;
+	background-color: #1f1175;
+}
+
+#container {
+	float:left;
+	width:550px;
+	margin:0;
+	padding:1em;
+	min-height: 400px;
+}
+
+#sidebar-1 {
+	background-color: #d6dcd5;
+	margin-left:600px;
+	margin-top: 20px;
+	min-height: 400px;
+}
+
+#footer {
+	padding:0.5em;
+	clear:both;
+}
+
+#footer p {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*comments' style */
+.comments-template{
+
+	margin: 10px 0 0;
+
+	border-top: 1px solid #ccc;
+
+	padding: 10px 0 0;
+
+}
+
+.post {
+	border-bottom:1px solid maroon;
+	margin: 10px 0;
+}
+
+.post > .post_title a{
+	color: #190a74;
+}
+
+/*
+meta
+*/
+div.meta {
+	font-size: 13px;
+}
+
+.comments-template ol{
+
+	margin: 0;
+
+	padding: 0 0 15px;
+
+	list-style: none;
+
+}
+
+
+
+.comments-template ol li{
+
+	margin: 10px 0 0;
+
+	line-height: 18px;
+
+	padding: 0 0 10px;
+
+	border-bottom: 1px solid #ccc;
+
+}
+
+
+
+.comments-template h2, .comments-template h3{
+
+	font-family: Georgia, Sans-serif;
+
+	font-size: 16px;
+
+}
+
+
+
+.commentmetadata{
+
+	font-size: 12px;
+
+}
+
+
+
+.comments-template p.nocomments{
+
+	padding: 0;
+
+}
+
+
+
+.comments-template textarea{
+
+	font-family: Arial, Helvetica, Georgia, Sans-serif;
+
+	font-size: 12px;
+
+}
+
+input[type="text"] {
+	height: 22px;
+	padding: 2px;
+	border: 1px solid olive;
+}
+
+input:focus {
+	border: 1px solid blue;
+}
+
+input#search_input {
+	width: 150px;
+}
+
+input#s {
+	background-image: url('images/find.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 32px;
+
+}
+
+input#searchsubmit {
+	display: none;
+}
+
+
+#sidebar-1 > ul {
+	padding: 2px 5px;
+}
+
+.sb_title {
+	padding: 5px;
+	background-color: aqua;
+	text-align: left;
+}
