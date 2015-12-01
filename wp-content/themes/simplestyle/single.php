@@ -17,7 +17,6 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php wp_get_archives('type=monthly&format=link'); ?>
-
 	<?php //comments_popup_script(); // off by default ?>
 
 	<?php wp_head(); ?>
@@ -29,40 +28,42 @@
 	<?php get_header(); ?>
 	<div id="container">
 		<?php if (have_posts()):?>
+			
+			<?php if (function_exists('dimox_breadcrumbs')) : dimox_breadcrumbs();?>
+			<?php endif; ?>
+			
 			<?php while (have_posts()): the_post();?>
-			<div class="post">
-				<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-				<div class="entry">
-					<p><?php the_content(); ?></p>
-					<?php wp_link_pages('<p><strong>Pages</strong>', '</p>', 'number'); ?>
-				</div>
+				<?php get_template_part('content', 'single');?>
 				<div class="comments-template">
 					<?php comments_template(); ?>
 				</div>
-				<div class="meta">
-					<p class="postmetadata">
-<?php _e('Filed under&#58;'); ?> <?php the_category(', ') ?> <?php _e('by'); ?> <?php  the_author(); ?><?php edit_post_link('编辑', ' &#124; ', ''); ?>
-					</p>
-				</div>
-			</div>
 			<?php endwhile; ?>
 
 			<div class="navigation">
-				<?php previous_post_link('? %link')?> <?php next_post_link('%link ?'); ?>
+				<div class="prev_article">
+					<?php previous_post_link('上一篇 %link')?> 
+				</div>
+				<div class="next_article">
+					<?php next_post_link('下一篇 %link'); ?>
+				</div>
+				
 			</div>
 
 			<?php else: ?>
-				<div class="post">
-					<h2><?php _e('页面消失了~~'); ?></h2>
-				</div>
+				<?php get_template_part('content', 'none'); ?>
 		<?php endif; ?>
 
 	</div>
 
 	<?php get_sidebar(); ?>
-
 	<?php get_footer(); ?>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.entry img').css('display', 'block');
+	});
+</script>
 
 </body>
 

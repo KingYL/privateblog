@@ -7,7 +7,7 @@
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-
+	
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
@@ -28,25 +28,12 @@
 	<div id="wrapper">
 		<?php get_header(); ?>
 		<div id="container">
+		<?php if (function_exists('dimox_breadcrumbs')) : dimox_breadcrumbs();?>
+		<?php endif; ?>
+
 		<?php if (have_posts()):?>
 			<?php while (have_posts()): the_post();?>
-			<div class="post">
-				<h2 class="post_title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-				<div class="entry">
-					<p><?php the_content(); ?></p>
-				</div>
-				<div class="meta">
-					<p class="postmetadata">
-						<img src="<?php bloginfo('template_directory'); ?>/images/clock.png" height="12" width="12" />
-						<?php the_time('Y-m-d H:i'); ?>&nbsp;&nbsp;
-						<img src="<?php bloginfo('template_directory'); ?>/images/bubble.png" height="12" width="12" />
-						<?php comments_popup_link('No Comment ', '1 Comment ', '% Comments '); ?>&nbsp;&nbsp;
-						<img src="<?php bloginfo('template_directory'); ?>/images/sort.png" height="12" width="12">
-						<?php the_category(', ') ?> <?php _e('by'); ?> <?php the_author(); ?>&nbsp;&nbsp;
-						<?php edit_post_link('Edit', ' &#124; ', ''); ?>
-					</p>
-				</div>
-			</div>
+				<?php get_template_part('content', get_post_format()); ?>
 			<?php endwhile; ?>
 
 		<div class="navigation">
@@ -54,9 +41,7 @@
 		</div>
 
 		<?php else: ?>
-			<div class="post">
-				<h2><?php _e('页面消失了~~'); ?></h2>
-			</div>
+			<?php get_template_part('content', 'none'); ?>
 		<?php endif; ?>
 
 		</div>

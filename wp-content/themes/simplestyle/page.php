@@ -28,17 +28,11 @@
 <div id="wrapper">
 	<?php get_header(); ?>
 	<div id="container">
+		<?php if (function_exists('dimox_breadcrumbs')) : dimox_breadcrumbs();?>
+		<?php endif; ?>
 		<?php if (have_posts()):?>
 			<?php while (have_posts()): the_post();?>
-			<div class="post">
-				<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-				<div class="entry">
-					<p><?php the_content(); ?></p>
-					<?php wp_link_pages('<p><strong>Pages</strong>', '</p>', 'number'); ?>
-					<?php edit_post_link('Edit', '<p>', '</p>'); ?>
-				</div>
-				
-			</div>
+				<?php get_template_part('content', 'page');?>
 			<?php endwhile; ?>
 
 			<?php else: ?>

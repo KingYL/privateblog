@@ -25,10 +25,11 @@
 </head>
 
 <body>
-<div id="wrapper">
-	<?php get_header(); ?>
-	<div id="container">
-		<?php if (have_posts()):?>
+	<div id="wrapper">
+		<?php get_header(); ?>
+		<div id="container">
+			<h4><?php wp_title();?></h4>
+			<?php if (have_posts()):?>
 			<?php while (have_posts()): the_post();?>
 			<div class="post">
 				<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
@@ -37,28 +38,26 @@
 				</div>
 				<div class="meta">
 					<p class="postmetadata">
-<?php _e('Filed under&#58;'); ?> <?php the_category(', ') ?> <?php _e('by'); ?> <?php  the_author(); ?><br />
-<?php comments_popup_link('暂无评论 &#187;', '1 条评论 &#187;', '% 评论 &#187;'); ?> <?php edit_post_link('编辑', ' &#124; ', ''); ?>
+						<?php _e('Filed under&#58;'); ?> <?php the_category(', ') ?> <?php _e('by'); ?> <?php  the_author(); ?><br />
+						<?php comments_popup_link('暂无评论 &#187;', '1 条评论 &#187;', '% 评论 &#187;'); ?> <?php edit_post_link('编辑', ' &#124; ', ''); ?>
 					</p>
 				</div>
 			</div>
-			<?php endwhile; ?>
+		<?php endwhile; ?>
 
-			<div class="navigation">
-				<?php posts_nav_link(); ?>
-			</div>
+		<div class="navigation">
+			<?php posts_nav_link(); ?>
+		</div>
 
-			<?php else: ?>
-				<div class="post">
-					<h2><?php _e('页面消失了~~'); ?></h2>
-				</div>
-		<?php endif; ?>
+	<?php else: ?>
+	<?php get_template_part('content', 'none'); ?>
+<?php endif; ?>
 
-	</div>
+</div>
 
-	<?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
-	<?php get_footer(); ?>
+<?php get_footer(); ?>
 </div>
 
 </body>

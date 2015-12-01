@@ -23,14 +23,11 @@
 
 	<?php wp_head(); ?>
 	
-	<script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/jquery-2.1.4.min.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/header.css" />
 </head>
 <body>
 	<div id="header">
 		<a id="blog_title" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-			<img src="<?php bloginfo('template_directory');?>/images/logo.png" height="100" width="200"></img>
+			<img src="<?php bloginfo('template_directory');?>/images/logo.png" height="80" width="170"></img>
 		</a>
 		<br />&nbsp;&nbsp;
 		<span id="blog_description"><?php bloginfo('description'); ?></span>
@@ -43,22 +40,6 @@
 		</div>
 	</div>
 	
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$(".menu li ul li a").mouseenter(function(event) {
-				$(this).parents(".menu>li").children('a').css('background-color','#190a75');
-			});
-			$(".menu li ul li a").mouseover(function(event) {
-				/* Act on the event */
-				$(this).parents(".menu > li").children('a').css('background-color', '#190a75');
-			});
-			$(".menu li ul li a").mouseleave(function(event) {
-				/* Act on the event */
-				$(this).parents(".menu > li").children('a').css('background-color', '');
-			});;
-
-		});
-	</script>
 </body>
 
 </html>

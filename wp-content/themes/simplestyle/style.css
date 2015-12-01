@@ -2,16 +2,22 @@
 
 Theme Name: Tutorial
 
-Theme URI: http://www.wpdesigner.com
+Theme URI: none
 
-Description: This is my theme for a tutorial.
+Description: This is KingYL's theme for a tutorial.
 
 Version: 1.0
 
 Author: Small Potato
 
-Author URI: http://www.wpdesigner.com/
+Author URI: http://weibo.com/u/3968633073/home?wvr=5&c=spr_sinamktbd_bd_baidub_weibo_t001&sudaref=www.baidu.com
 
+*/
+
+/*
+* {
+	border: 2px solid black;
+}
 */
 
 body {
@@ -29,33 +35,43 @@ ul {
 a:visited {
 	color: blue;
 }
+a.text {
+	color: black;
+	text-decoration: none;
+}
 
 #wrapper {
 	margin: auto;
  	top: 0; left: 0; bottom: 0; right: 0;
-	width: 800px;
+	width: 90%;
 	text-align: left;
-	background-color: silver;
+	background-color: #fff;
+	padding: 20px;
 }
 
 #header {
-	padding:0 0.1em;
-	background-color: #1f1175;
+	margin: 0 auto;
+	background-color: black;
+	height: 120px;
+}
+
+#header ul {
+	z-index: 100;
 }
 
 #container {
+	width: 75%;
 	float:left;
-	width:550px;
 	margin:0;
-	padding:1em;
-	min-height: 400px;
+	min-height: 500px;
+	overflow: auto;
 }
 
 #sidebar-1 {
-	background-color: #d6dcd5;
-	margin-left:600px;
-	margin-top: 20px;
+	width: 20%;
+	float: right;
 	min-height: 400px;
+	padding-top: 0px;
 }
 
 #footer {
@@ -71,10 +87,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 /*comments' style */
 .comments-template{
 
@@ -84,22 +96,6 @@ a:hover {
 
 	padding: 10px 0 0;
 
-}
-
-.post {
-	border-bottom:1px solid maroon;
-	margin: 10px 0;
-}
-
-.post > .post_title a{
-	color: #190a74;
-}
-
-/*
-meta
-*/
-div.meta {
-	font-size: 13px;
 }
 
 .comments-template ol{
@@ -181,20 +177,187 @@ input#s {
 	background-repeat: no-repeat;
 	background-position: right;
 	padding-right: 32px;
-
+	border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius:2px;-o-border-radius:2px;-ms-border-radius:2px;
 }
 
 input#searchsubmit {
 	display: none;
 }
 
-
 #sidebar-1 > ul {
-	padding: 2px 5px;
+	margin: 0px auto;
+	padding: 5px 5px;
 }
-
+#sidebar-1 >ul ul {
+	padding-bottom: 5px;
+} 
+/*sidebar-1区域的标题*/
 .sb_title {
+	margin-top: 0px;
 	padding: 5px;
 	background-color: aqua;
 	text-align: left;
+}
+
+.mbx_dh {
+	padding: 5px;
+	line-height: 20px;
+}
+
+/*content.php区*/
+
+.post {
+	_height: 180px;
+	min-height: 180px;
+	clear: both;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	overflow: hidden;
+}
+.post_main {
+	width: 79%;
+	float: left;
+	padding: 0px;
+	-webkit-box-shadow: 5px 5px 10px #666;
+	-moz-box-shadow: 5px 5px 10px #666;
+	box-shadow: 5px 5px 10px #666;
+}
+
+.quot {
+	font-size: 20px;
+	display: inline;
+}
+
+.post_title {
+	margin: 0px auto;
+	padding: 5px;
+	background-color: silver;
+}
+
+.post_title a{
+	font-size: 30px;
+	color: #15312f;
+}
+
+.post_title a:hover {
+	text-decoration: underline;
+}
+
+/*
+meta
+*/
+.meta {
+	margin:0px;
+	font-size: 12px;
+	padding: 5px;
+	color: grey;
+	text-align: left;
+}
+
+.post .entry {
+	text-indent: 24px;
+	padding: 3px;
+}
+.post .entry img{
+	display: none;
+}
+
+.post_side {
+	width: 18%;
+	float: right;
+	position: relative;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	-webkit-box-shadow: 5px 5px 10px #666;
+	-moz-box-shadow: 5px 5px 10px #666;
+	box-shadow: 5px 5px 10px #666;
+}
+
+.post_time {
+	text-align: center;
+	background-color: orange;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+.post_time .year{
+	display: block;
+	text-align: left;
+	color: #dbd7ef;
+}
+.post_time .clock {
+	display: block;
+	color: #dbd7ef;
+	text-align: right;
+}
+.post_sort .date {
+	margin: 0 auto;
+	color: #75bf73;
+	font-size: 25px;
+	display: block;
+	text-align: center;
+}
+
+.post_author {
+	border-bottom: 20px;
+}
+
+img.meta_icon {
+	width: 14px;
+	height: 12px;
+}
+
+.next_article {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.forhint {
+	color: grey;
+}
+
+.btn:link {
+	padding: 10px;
+	background-color: #1153EE;
+	color: white;
+}
+.btn:hover {
+	background-color: white;
+	color: #1153EE;
+}
+
+/*
+	page style
+*/
+
+#post_page {
+	border: 1 solid orange;
+}
+
+#page_title {
+	background-color: #75858A;
+	padding: 5px;
+}
+
+#page_title > a{
+	color: black;
+}
+
+#page_content {
+	min-height: 400px;
+	text-indent: 24px;
+}
+
+/*
+	single.php's style
+*/
+.single-title a{
+	color: #0000B5;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.uk-breadcrumb {
+	margin-bottom: 0px;
 }

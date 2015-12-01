@@ -19,10 +19,10 @@
 				</ul>
 			</li>
 			<li class="rssfeed">
-				<h3 class="sb_title">RSS订阅</h3>
+				<h3 class="sb_title">订阅</h3>
 				<ul>
 					<li>
-						<a href="<?php bloginfo('url'); ?>/?feed=rss2" target="_blank" class="icon1" title="欢迎订阅<?php bloginfo('name'); ?>">RSS订阅</a>
+						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Syndicate this site using RSS'); ?>"><img src="http://www.mozilla.org/images/feed-icon-14x14.png" alt="RSS Feed" title="RSS Feed" />RSS2订阅</a>
 					</li>
 				</ul>
 			</li>
