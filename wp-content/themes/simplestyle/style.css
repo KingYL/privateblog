@@ -218,9 +218,9 @@ input#searchsubmit {
 	width: 79%;
 	float: left;
 	padding: 0px;
-	-webkit-box-shadow: 5px 5px 10px #666;
+	/*-webkit-box-shadow: 5px 5px 10px #666;
 	-moz-box-shadow: 5px 5px 10px #666;
-	box-shadow: 5px 5px 10px #666;
+	box-shadow: 5px 5px 10px #666;*/
 }
 
 .quot {
@@ -269,9 +269,9 @@ meta
 	right: 0;
 	top: 0;
 	z-index: 1;
-	-webkit-box-shadow: 5px 5px 10px #666;
+	/*-webkit-box-shadow: 5px 5px 10px #666;
 	-moz-box-shadow: 5px 5px 10px #666;
-	box-shadow: 5px 5px 10px #666;
+	box-shadow: 5px 5px 10px #666;*/
 }
 
 .post_time {

@@ -20,13 +20,13 @@
 
 // ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
 /** WordPress数据库的名称 */
-define('DB_NAME', 'private_blog');
+define('DB_NAME', 'qixiayuan_blog');
 
 /** MySQL数据库用户名 */
-define('DB_USER', 'blogadmin');
+define('DB_USER', 'qixiayuan_admin');
 
 /** MySQL数据库密码 */
-define('DB_PASSWORD', 'blogadmin');
+define('DB_PASSWORD', 'qixiayuannianadmin12580');
 
 /** MySQL主机 */
 define('DB_HOST', 'localhost');
@@ -76,7 +76,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /**
  * zh_CN本地化设置：启用ICP备案号显示
