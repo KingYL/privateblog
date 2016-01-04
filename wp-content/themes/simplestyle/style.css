@@ -1,14 +1,14 @@
 /*  
 
-Theme Name: Tutorial
+Theme Name: Simple Black
 
 Theme URI: none
 
 Description: This is KingYL's theme for a tutorial.
 
-Version: 1.0
+Version: 1.2
 
-Author: Small Potato
+Author: KingYL
 
 Author URI: http://weibo.com/u/3968633073/home?wvr=5&c=spr_sinamktbd_bd_baidub_weibo_t001&sudaref=www.baidu.com
 
@@ -21,8 +21,8 @@ Author URI: http://weibo.com/u/3968633073/home?wvr=5&c=spr_sinamktbd_bd_baidub_w
 */
 
 body {
-	background-color: white;
-	font-family: serif;
+	background-color: rgba(238, 242, 245, 0.8);
+	font-family: \cursive,Verdana, Geneva, sans-serif;
 	text-align: center;
 	color: black;
 	background-repeat: no-repeat;
@@ -42,17 +42,21 @@ a.text {
 
 #wrapper {
 	margin: auto;
- 	top: 0; left: 0; bottom: 0; right: 0;
-	width: 90%;
+	width: 100%;
 	text-align: left;
-	background-color: #fff;
-	padding: 20px;
+	background-color: #f0f0e2;
 }
 
 #header {
+	position: fixed;
+	left: 0;
+	top: 0;
 	margin: 0 auto;
-	background-color: black;
-	height: 120px;
+	background-color: #292929;
+	min-height: 60px;
+	height: 66px;
+	max-height: 80px;
+	width: 100%;
 }
 
 #header ul {
@@ -60,20 +64,23 @@ a.text {
 }
 
 #container {
-	width: 75%;
+	width: 70%;
 	float:left;
 	margin:0;
 	min-height: 500px;
-	overflow: auto;
+	overflow: hidden;
+	padding-left: 60px;
 }
 
 #sidebar-1 {
 	width: 20%;
 	float: right;
 	min-height: 400px;
-	padding-top: 0px;
+	padding-right: 20px;
 }
-
+#container, #sidebar-1 {
+	padding-top: 80px;
+}
 #footer {
 	padding:0.5em;
 	clear:both;
@@ -85,6 +92,7 @@ a.text {
 
 a {
 	text-decoration: none;
+	font-size: 16px;
 }
 
 /*comments' style */
@@ -128,7 +136,7 @@ a {
 
 	font-family: Georgia, Sans-serif;
 
-	font-size: 16px;
+	font-size: 18px;
 
 }
 
@@ -136,7 +144,7 @@ a {
 
 .commentmetadata{
 
-	font-size: 12px;
+	font-size: 14px;
 
 }
 
@@ -154,18 +162,31 @@ a {
 
 	font-family: Arial, Helvetica, Georgia, Sans-serif;
 
-	font-size: 12px;
+	font-size: 14px;
 
 }
 
+.left {
+	float: left;
+}
+
+ul.uk-pagination >li>a{
+	border: 1px solid black;
+	background-color: white;
+}
+ul.uk-breadcrumb>li>a {
+	color: #1e2126;
+}
 input[type="text"] {
-	height: 22px;
-	padding: 2px;
-	border: 1px solid olive;
+	height: 24px;
+	padding: 1px;
+	border: 1px solid grey;
+	font-size: 18px;
+	width: 150px;
 }
 
 input:focus {
-	border: 1px solid blue;
+	border: 1px solid black;
 }
 
 input#search_input {
@@ -176,12 +197,18 @@ input#s {
 	background-image: url('images/find.png');
 	background-repeat: no-repeat;
 	background-position: right;
-	padding-right: 32px;
+	padding-right: 34px;
 	border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius:2px;-o-border-radius:2px;-ms-border-radius:2px;
 }
 
 input#searchsubmit {
 	display: none;
+}
+
+input.long-text {
+	min-width: 250px;
+	max-width: 400px;
+	width: 300px;
 }
 
 #sidebar-1 > ul {
@@ -190,13 +217,17 @@ input#searchsubmit {
 }
 #sidebar-1 >ul ul {
 	padding-bottom: 5px;
+}
+#sidebar-1 a {
+	color: #080909;
 } 
 /*sidebar-1区域的标题*/
 .sb_title {
 	margin-top: 0px;
 	padding: 5px;
-	background-color: aqua;
+	background-color: #2c313a;
 	text-align: left;
+	color: #e7e9ee;
 }
 
 .mbx_dh {
@@ -210,7 +241,7 @@ input#searchsubmit {
 	_height: 180px;
 	min-height: 180px;
 	clear: both;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	margin-top: 0px;
 	overflow: hidden;
 }
@@ -218,31 +249,40 @@ input#searchsubmit {
 	width: 79%;
 	float: left;
 	padding: 0px;
+	background-color: white;
 	/*-webkit-box-shadow: 5px 5px 10px #666;
 	-moz-box-shadow: 5px 5px 10px #666;
 	box-shadow: 5px 5px 10px #666;*/
 }
 
 .quot {
-	font-size: 20px;
+	font-size: 22px;
 	display: inline;
 }
 
 .post_title {
 	margin: 0px auto;
 	padding: 5px;
-	background-color: silver;
 }
 
 .post_title a{
-	font-size: 30px;
-	color: #15312f;
+	font-size: 32px;
+	color: #363b45;
 }
 
 .post_title a:hover {
 	text-decoration: underline;
 }
 
+.post-date {
+	padding: 12px 14px;
+	margin: 0px;
+	background-color: #1e2126;
+	color: rgba(138, 171, 161, 0.8);
+	width: 185px;
+	text-align: center;
+	font-size: 21px;
+}
 /*
 meta
 */
@@ -254,6 +294,9 @@ meta
 	text-align: left;
 }
 
+.post-author-icon {
+	float: left;
+}
 .post .entry {
 	text-indent: 24px;
 	padding: 3px;
@@ -276,7 +319,7 @@ meta
 
 .post_time {
 	text-align: center;
-	background-color: orange;
+	background-color: #303029;
 	margin-bottom: 20px;
 	font-size: 18px;
 }
@@ -290,12 +333,15 @@ meta
 	color: #dbd7ef;
 	text-align: right;
 }
+
 .post_sort .date {
 	margin: 0 auto;
-	color: #75bf73;
+	color: black;
 	font-size: 25px;
 	display: block;
 	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 2px solid black;
 }
 
 .post_author {
@@ -317,14 +363,23 @@ img.meta_icon {
 	color: grey;
 }
 
+.btn {
+	border: none;
+	padding: 5px 20px;
+	height: 35px;
+	width: 140px;
+	font-size: 16px;
+	background-color: #292929;
+	color: #dfeaf2;
+}
 .btn:link {
 	padding: 10px;
 	background-color: #1153EE;
 	color: white;
 }
 .btn:hover {
-	background-color: white;
-	color: #1153EE;
+	background-color: #1e2126;
+	color: white;
 }
 
 /*
@@ -336,12 +391,13 @@ img.meta_icon {
 }
 
 #page_title {
-	background-color: #75858A;
-	padding: 5px;
+	
 }
 
 #page_title > a{
-	color: black;
+	color: #312929;
+	text-decoration: none;
+	font-size: 24px;
 }
 
 #page_content {
@@ -352,12 +408,23 @@ img.meta_icon {
 /*
 	single.php's style
 */
+
 .single-title a{
-	color: #0000B5;
+	color: #1e2126;
 	font-weight: bold;
 	text-decoration: none;
+	font-size: 24px;
 }
 
-.uk-breadcrumb {
-	margin-bottom: 0px;
+.prev_article, .next_article {
+	padding: 15px;
+}
+.prev_article>a, .next_article>a {
+	color: #312930;
+	font-size: 22px;
+}
+
+.prev_article>a:hover, .next_article>a:hover {
+	color: #1e2126;
+	font-size: 23px;
 }

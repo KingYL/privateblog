@@ -15,6 +15,7 @@
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 
 	<?php //comments_popup_script(); // off by default ?>
@@ -27,12 +28,12 @@
 	<div id="wrapper">
 		<?php get_header(); ?>
 		<div id="container">
-		<?php if (function_exists('dimox_breadcrumbs')) : dimox_breadcrumbs();?>
+			<?php if (function_exists('dimox_breadcrumbs')) : dimox_breadcrumbs();?>
 		<?php endif; ?>
 
 		<?php if (have_posts()):?>
 			<?php while (have_posts()): the_post();?>
-				<?php get_template_part('content', get_post_format()); ?>
+				<?php get_template_part('content', 'archive'); ?>
 			<?php endwhile; ?>
 
 		<div class="navigation">
@@ -43,11 +44,13 @@
 			<?php get_template_part('content', 'none'); ?>
 		<?php endif; ?>
 
-		</div>
-		<?php get_sidebar(); ?>
-
-		<?php get_footer(); ?>
 	</div>
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
+</div>
+
 </body>
 
 </html>

@@ -28,8 +28,6 @@
 	<div id="wrapper">
 		<?php get_header(); ?>
 		<div id="container">
-		<?php if (function_exists('dimox_breadcrumbs')) : dimox_breadcrumbs();?>
-		<?php endif; ?>
 
 		<?php if (have_posts()):?>
 			<?php while (have_posts()): the_post();?>
@@ -37,7 +35,7 @@
 			<?php endwhile; ?>
 
 		<div class="navigation">
-			<?php posts_nav_link(); ?>
+			<?php if( function_exists( 'Bing_get_pagenavi' ) ) Bing_get_pagenavi(); ?>
 		</div>
 
 		<?php else: ?>

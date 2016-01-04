@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Twenty Fourteen 1.5\n"
+"Project-Id-Version: Twenty Fourteen 1.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/twentyfourteen\n"
-"POT-Creation-Date: 2015-08-20 18:29+0000\n"
-"PO-Revision-Date: 2015-08-20 18:29+0000\n"
+"POT-Creation-Date: 2015-12-12 22:25+0000\n"
+"PO-Revision-Date: 2015-12-12 22:25+0000\n"
 "Last-Translator: Jimmy Xu <me@jimmyxu.org>\n"
 "Language-Team: WordPress China\n"
 "Language: zh_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #: 404.php:17
 msgid "Not Found"
@@ -488,6 +488,3 @@ msgstr "贡献者页面"
 #. Template Name of the plugin/theme
 msgid "Full Width Page"
 msgstr "全宽页面"
-
-#~ msgid "http://wordpress.org/"
-#~ msgstr "http://cn.wordpress.org/"

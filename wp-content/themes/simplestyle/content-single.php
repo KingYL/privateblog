@@ -1,6 +1,6 @@
-<div class='single'>
+<div class="single">
 	<hr />
-	<h2 class='single-title'>
+	<h2 class="single-title">
 		<a href="<?php the_permalink();?>"><?php the_title();?></a>
 	</h2>
 	<hr />
@@ -15,7 +15,7 @@
 		<img class="meta_icon" src="<?php bloginfo('template_directory'); ?>/images/folder.png" />
 		<span><?php the_category('&nbsp;');?></span>&nbsp;
 		<span class="post_tag">
-			<?php if (get_the_tags()):the_tags('<strong>标签:</strong>', ' ', ''); ?>;
+			<?php if (get_the_tags()):the_tags('<strong>标签:</strong>', '&nbsp;&nbsp;&nbsp;', ''); ?>;
 		<?php endif; ?>
 	</span>
 	<span><?php edit_post_link('编辑', ' &#124; ', ''); ?></span>

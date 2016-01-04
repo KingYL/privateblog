@@ -28,32 +28,24 @@
 	<div id="wrapper">
 		<?php get_header(); ?>
 		<div id="container">
-			<h4><?php wp_title();?></h4>
-			<?php if (have_posts()):?>
+			<?php if (function_exists('dimox_breadcrumbs')) : dimox_breadcrumbs();?>
+		<?php endif; ?>
+		<hr />
+
+		<?php if (have_posts()):?>
 			<?php while (have_posts()): the_post();?>
-			<div class="post">
-				<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-				<div class="entry">
-					<p><?php the_excerpt(); ?></p>
-				</div>
-				<div class="meta">
-					<p class="postmetadata">
-						<?php _e('Filed under&#58;'); ?> <?php the_category(', ') ?> <?php _e('by'); ?> <?php  the_author(); ?><br />
-						<?php comments_popup_link('暂无评论 &#187;', '1 条评论 &#187;', '% 评论 &#187;'); ?> <?php edit_post_link('编辑', ' &#124; ', ''); ?>
-					</p>
-				</div>
-			</div>
-		<?php endwhile; ?>
+				<?php get_template_part('content', 'archive'); ?>
+			<?php endwhile; ?>
 
 		<div class="navigation">
 			<?php posts_nav_link(); ?>
 		</div>
 
-	<?php else: ?>
-	<?php get_template_part('content', 'none'); ?>
-<?php endif; ?>
+		<?php else: ?>
+			<?php get_template_part('content', 'none'); ?>
+		<?php endif; ?>
 
-</div>
+	</div>
 
 <?php get_sidebar(); ?>
 

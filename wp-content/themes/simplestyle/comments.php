@@ -20,15 +20,22 @@ $oddcomment = 'alt';
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-	<h3 id="comments"><?php comments_number('评论 0', '评论 1', '评论 %' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 id="comments"><?php comments_number('评论 0', '评论 1', '评论( % )');?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
 	<ul class="uk-comment-list">
 		<?php foreach ($comments as $comment) : ?>
 
 		<li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
 			<article class="uk-comment">
-				<div class="uk-comment-meta">
-					<strong><?php comment_author_link() ?></strong>, <?php _e('on'); ?> <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> <?php _e('at');?> <?php comment_time() ?></a> <?php _e('Said&#58;'); ?> <?php edit_comment_link('Edit Comment','',''); ?>
+				<div class="uk-comment-header">
+					<img class="left uk-comment-avatar" src="<?php bloginfo('template_directory'); ?>/images/critic.png" height="32" width="32" />
+					<span class="uk-comment-title"><?php comment_author_link() ?></span>
+					<br/>
+					<div class="uk-comment-meta">
+						<span><?php comment_date('Y-m-d') ?><?php comment_time() ?></span> 
+						<?php _e('说道:'); ?> <?php edit_comment_link('编辑评论 ','',''); ?>	
+					</div>
+					
 					<?php if ($comment->comment_approved == '0') : ?>
 					<em><?php _e('您的评论还在审核中...'); ?></em>
 					<?php endif; ?>
@@ -53,7 +60,7 @@ $oddcomment = 'alt';
 
 <?php endforeach; /* end for each comment */ ?>
 </ul>
-
+<hr />
 <?php else : // this is displayed if there are no comments so far ?>
 
 	<?php if ('open' == $post->comment_status) : ?>
@@ -84,17 +91,17 @@ $oddcomment = 'alt';
 	<?php else : ?>
 
 	<p>	
-		<input type="text" name="author" id="author" placeholder="您的昵称" value="<?php echo $comment_author; ?>" size="40" tabindex="1" />
+		<input class="long-text" type="text" name="author" id="author" placeholder="您的昵称" value="<?php echo $comment_author; ?>" size="40" tabindex="1" />
 		<label class="forhint"><small><?php if ($req) _e("(必填)"); ?></small></label>
 	</p>
 
 	<p>
-		<input type="text" name="email" id="email" placeholder="您的邮箱" value="<?php echo $comment_author_email; ?>" size="40" tabindex="2" />
+		<input class="long-text" type="text" name="email" id="email" placeholder="您的邮箱" value="<?php echo $comment_author_email; ?>" size="40" tabindex="2" />
 		<label class="forhint"><small><?php if ($req) echo _e("(必填)"); ?>用于交流，保证绝对不会公开</small></label>
 	</p>
 
 	<p>
-		<input type="text" name="url" id="url" placeholder="您的博客网址" value="<?php echo $comment_author_url; ?>" size="40" tabindex="3" />
+		<input class="long-text" type="text" name="url" id="url" placeholder="您的博客网址" value="<?php echo $comment_author_url; ?>" size="40" tabindex="3" />
 		<label class="forhint"><small>(可选)我猜您不会留下推广链接的</small></label>
 	</p>
 

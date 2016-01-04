@@ -26,18 +26,15 @@
 </head>
 <body>
 	<div id="header">
-		<a id="blog_title" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-			<img src="<?php bloginfo('template_directory');?>/images/logo.png" height="80" width="170"></img>
-		</a>
-		<br />&nbsp;&nbsp;
-		<span id="blog_description"><?php bloginfo('description'); ?></span>
+		<div class="left">
+			<a id="blog_title" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('template_directory');?>/images/blog-title.png" height="63" width="120" /></a>
+			<span id="blog_description" class="uk-text-bottom"><?php bloginfo('description'); ?></span>
+		</div>
 		<div id="nav">
 			<?php wp_nav_menu(array("theme-location"=>"header-menu")); ?>
-			
-			<div id="header_search">
-				<?php include(TEMPLATEPATH.'/searchform.php'); ?>
-			</div>
 		</div>
+		<?php include(TEMPLATEPATH.'/searchform.php'); ?>
+		
 	</div>
 	
 </body>
