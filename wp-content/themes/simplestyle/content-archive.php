@@ -1,6 +1,6 @@
 <?php setPostViews(get_the_ID()); ?>
 <div class="post">
-	<div class="post_main">
+	<div class="archive_main post-color">
 		
 		<div class="post_head">
 			<!-- <img class="post-author-icon" src="<?php bloginfo('template_directory'); ?>/images/author-icon.png" height="65" width="75" alt="无描述"/>
@@ -15,6 +15,7 @@
 					<span><?php the_author(); ?></span>&nbsp;
 					<img class="meta_icon" src="<?php bloginfo('template_directory'); ?>/images/sort.png" />
 					<span><?php the_category('&nbsp;');?></span>&nbsp;
+					<span>发布时间:<?php the_time('Y-n-d H:i');?></span>&nbsp;
 					<span class="post_tag">
 						<?php if (get_the_tags()):the_tags('<strong>标签:</strong>', '&nbsp;&nbsp;&nbsp;', ''); ?>;
 						<?php endif; ?>
@@ -29,7 +30,7 @@
 		</div>
 	</div>
 
-	<div class="post_side">
+	<!-- <div class="post_side">
 		<div class="post_time">
 			<span class="year"><?php the_time('Y');?> </span>
 			<span class="clock"><?php the_time('H:i');?></span>
@@ -37,6 +38,6 @@
 		<div class="post_sort">
 			<span class="date"><?php the_time('n月d日');?></span>
 		</div>
-	</div>
+	</div> -->
 
 </div>

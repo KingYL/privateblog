@@ -61,8 +61,9 @@ div#nav {
 	float: left;
 } 
 #nav ul li ul a {
-	padding: 5px;
-	font-size: 12px;
+	padding: 8px 15px;
+	font-size: 14px;
+	width: 100%;
 }
 #nav ul li:hover ul { 
 	display: block; 
@@ -80,10 +81,16 @@ div#nav {
 	color: white;
 	background-color: #1e2126; 
 }
-
-#header_search {
-	float: right;
-	margin-top: 5px;
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+	#header_search {
+		display: none;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	#header_search {
+		float: right;
+		margin-top: 5px;
+	}
 }
 
 

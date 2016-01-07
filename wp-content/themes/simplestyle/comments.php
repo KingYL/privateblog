@@ -41,7 +41,7 @@ $oddcomment = 'alt';
 					<?php endif; ?>
 				</div>
 				<div class="uk-comment-body">
-					<?php comment_text(); ?>
+					<?php echo htmlspecialchars(get_comment_text()); ?>
 					<?php comment_reply_link(); ?>
 				</div>
 			</article>

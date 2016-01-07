@@ -145,13 +145,25 @@ function setPostViews($postID) {
 //加入自定义的css文件和javascript文件
 function myScript (){
   wp_enqueue_script('jquery', get_stylesheet_directory_uri().'/js/jquery-2.1.4.min.js');
-  wp_enqueue_script('myfns', get_stylesheet_directory_uri().'/js/js_fns.js');
   wp_enqueue_script('uikit', get_stylesheet_directory_uri().'/js/uikit.min.js');
   wp_enqueue_style('header', get_stylesheet_directory_uri().'/css/header.css');
-  wp_enqueue_style('default', get_stylesheet_directory_uri().'/css/default.css');
+  wp_enqueue_script('default', get_stylesheet_directory_uri().'/'.'css/default.css');
   wp_enqueue_style('uikit', get_stylesheet_directory_uri().'/css/uikit.min.css');
+  wp_enqueue_script('css-media', get_stylesheet_directory_uri().'/'.'js/css3-mediaqueries.js');
+  wp_enqueue_script('html5', get_stylesheet_directory_uri().'/'.'js/html5.js');
+  wp_enqueue_script('my-fns', get_stylesheet_directory_uri().'/js/js-fns.js');
+  
 }
 add_action('wp_enqueue_scripts', 'myScript');
+
+//禁止加载WP自带的jquery.js
+if ( !is_admin() ) { // 后台不禁止
+function my_init_method() {
+wp_deregister_script( 'jquery' );  // 取消原有的 jquery 定义
+}
+add_action('init', 'my_init_method'); 
+}
+wp_deregister_script( 'l10n' );
 
 
 function Bing_get_pagenavi( $query = false, $num = false, $before = '<ul class="uk-pagination uk-pagination-left">', $after = '</ul>', $options = array() ){

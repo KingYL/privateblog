@@ -2,7 +2,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
-	<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
+	<title>
+		<?php wp_title(' '); ?>
+		<?php if (wp_title(' ', false)) echo '-'; ?>
+		<?php bloginfo('name'); ?>
+	</title>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
 

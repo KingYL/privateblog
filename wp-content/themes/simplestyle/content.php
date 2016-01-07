@@ -1,8 +1,8 @@
 <?php setPostViews(get_the_ID()); ?>
-<div class="post">
-	<div class="post-date">
-		<?php the_time('Y年m月d日');?>
-	</div>
+<div class="post-date">
+	<?php the_time('Y年m月d日');?>
+</div>
+<div class="post post-color">
 	<div class="post_main">
 		<div class="post_head">
 			<img class="post-author-icon" src="<?php bloginfo('template_directory'); ?>/images/author-icon.png" height="65" width="75" alt="无描述"/>
@@ -29,16 +29,6 @@
 		<div class="entry">
 			<p><?php the_content('阅读全文'); ?></p>
 		</div>
-	</div>
-
-	<div class="post_side">
-		<!-- <div class="post_time">
-			<span class="year"><?php the_time('Y');?> </span>
-			<span class="clock"><?php the_time('H:i');?></span>
-		</div>
-		<div class="post_sort">
-			<span class="date"><?php the_time('n月d日');?></span>
-		</div> -->
 	</div>
 
 </div>

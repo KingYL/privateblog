@@ -12,6 +12,7 @@
 		<?php comments_popup_link('木有评论 ', '一条评论 ', '评论 % '); ?>&nbsp;				
 		<img class="meta_icon" src="<?php bloginfo('template_directory'); ?>/images/author.png" />
 		<span><?php the_author(); ?></span>&nbsp;
+		<span>发布时间:<?php the_time('Y-n-d H:i');?></span>&nbsp;
 		<img class="meta_icon" src="<?php bloginfo('template_directory'); ?>/images/folder.png" />
 		<span><?php the_category('&nbsp;');?></span>&nbsp;
 		<span class="post_tag">
